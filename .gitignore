@@ -1,0 +1,4 @@
+.env
+src/db.php
+vendor/
+node_modules/
