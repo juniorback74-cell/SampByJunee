@@ -10,8 +10,13 @@
 
 
   
-  if(isset($name) && isset($password)){
+  if(!empty($name) && !empty($password)){
     $cache = mysqli_query($conexion, "SELECT salt FROM player WHERE name = '$name';");
+    if(!$cache){
+    echo "Error en la base de datos.";
+    exit;
+}
+
     if(mysqli_num_rows($cache)>0){
         $result = mysqli_fetch_array($cache);
         $salt = $result['salt'];
@@ -24,17 +29,17 @@
             header("location:dashboard.html");
         }else{
             include("login.html");
+            exit;
         }
     }else{
         include("login.html");
+        exit;
     }
 }else{
     include("login.html");
+    exit;
 }
 
-if (isset($resultado)) {
-    mysqli_free_result($resultado);
-}
 if (isset($resultado)) {
     mysqli_free_result($resultado);
 }
