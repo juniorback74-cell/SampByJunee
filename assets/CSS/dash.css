@@ -1,0 +1,174 @@
+/* Reset y body */
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.player-skin {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.player-skin img {
+    width: 120px; /* Ajusta el tamaño que quieras */
+    height: 120px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 2px solid #3d396f;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #09101d;
+    color: #e3efff;
+}
+
+.header .logo {
+    height: 50px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background-color: #3d396f;
+    color: #e3efff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Container Dashboard */
+.container-dashboard {
+    display: flex;
+    min-height: calc(100vh - 70px);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background-color: #0a1b2c;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.sidebar.hide {
+    transform: translateX(-100%);
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1c2a3c;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar ul li button:hover {
+    background-color: #3d396f;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.left, .right {
+    background: #fff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    flex: 1 1 300px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+h2 {
+    margin-bottom: 0.7rem;
+}
+
+.progress-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.progress-bar {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    flex: 1 1 200px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+}
+
+.progress-label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container-dashboard {
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .container, .progress-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

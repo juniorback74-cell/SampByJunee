@@ -1,0 +1,123 @@
+body{
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.login-container{
+    width: 20%;
+    margin: 180px auto 0;
+    background-color: rgb(9, 16, 29);
+    padding: 20px;
+    border-radius: 10px;
+    border-color: #aba7b2;
+    box-shadow: 0 0 24px #ffffff;
+}
+
+.TextInd{
+    color: rgb(199, 213, 225);
+}
+
+form{
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #1c0b8d;
+    border-radius: 4px;
+}
+
+button[type="submit"]{
+    width: 100%;
+    background-color: #3d396f;
+    color: rgb(227, 239, 255);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    font-style: normal;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button[type="submit"]:hover {
+    background-color: #5215a8;
+    box-shadow: 0px 0px 20px 10px #1c0b8d;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(156, 117, 117);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+i.fa-user {
+    content: "\f007"; 
+}
+
+i.fa-lock {
+    content: "\f084";
+}
+
+.input-group{
+    position: relative;
+}
+
+.input-group i{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    font-size: 20px;
+}
+
+
+/* Responsive bb */
+@media screen and (max-width: 1024px){
+    .login-container{
+        width: 35%;
+        margin-top: 120px;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .login-container{
+        width: 50%;
+        margin-top: 100px;
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .login-container{
+        width: 80%;
+        margin-top: 60px;
+        padding: 10px;
+    }
+
+    button[type="submit"]{
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    input[type="text"],
+    input[type="password"]{
+        padding: 10px;
+    }
+}
